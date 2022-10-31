@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrueFalseQuiz.MainPage">
+
+    <StackLayout BackgroundColor="LightPink">
+        <Frame BackgroundColor="LightBlue" Padding="24" CornerRadius="0">
+            <Label Text="Let's Take a Quiz" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+        </Frame>
+        <Image x:Name="imageSpot" Source="" HeightRequest="150" IsVisible="false"></Image>
+        <Label Text="It takes a sloth two weeks to digest it's meal." x:Name="questionArea" FontSize="20" Padding="30,0,30,0" TextColor="Black" IsVisible="false"/>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Text="Start Quiz" FontSize="24" Clicked="StartClicked" x:Name="startButton" IsVisible="true" Grid.ColumnSpan="2"/>
+            <Button Text="Start a New Quiz" FontSize="24" Clicked="RestartClicked" x:Name="restartButton" IsVisible="false" Grid.ColumnSpan="2"/>
+            <Button Text="False" FontSize="24" Clicked="FalseClicked" x:Name="falseButton" IsVisible="false"/>
+            <Button Grid.Column="1" Text="True" FontSize="24" Clicked="TrueClicked" x:Name="trueButton" IsVisible="false"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
