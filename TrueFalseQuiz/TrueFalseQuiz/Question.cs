@@ -7,7 +7,7 @@ using Xamarin.Forms;
 namespace TrueFalseQuiz
 {
      class Question
-    {
+     {
         public string Text { get; set; }
         public string Image {  get; set; }
 
@@ -16,5 +16,5 @@ namespace TrueFalseQuiz
             this.Text = text;
             this.Image = image;
         } 
-    }
+     }
 }

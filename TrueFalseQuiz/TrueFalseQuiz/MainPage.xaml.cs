@@ -17,12 +17,16 @@ namespace TrueFalseQuiz
 
         List<Question> questions = new List<Question>()
         {
-            new Question("Cats make the best pets.", "cat.png"),
-            new Question("On cold days I like to sit on the couch with a warm blanket.", "blanket.png"),
+            new Question("Cats make the best pets.", "cat.jpg"),
+            new Question("On cold days I like to sit on the couch with a warm blanket.", "blanket.jpg"),
             new Question("Schrodinger's cat is dead.", "schrodingers_cat.jpg"),
             new Question("Schrodinger's cat is alive", "schrodingers_cat.jpg"),
             new Question("I prefer tea over coffee.", "tea_or_coffee.jpg"),
-            new Question("Dogs are great.", "dog.jpg")
+            new Question("Dogs are great.", "dog.jpg"),
+            new Question("I want to be an owl when I grow up.", "owl.jpg"),
+            new Question("I like pie more than cake.", "pie.jpg"),
+            new Question("It is possible to have too many chocolate chips in a cookie", "cookie.jpg"),
+            new Question("Vanilla is the best flavor for ice cream.", "vanilla.jpg")
         };
 
         List<string> trueTraits = new List<string>()
@@ -75,7 +79,7 @@ namespace TrueFalseQuiz
 
         void GetNextQuestion()
         {
-            int questionNumber = GenerateNonRepeatingRandomNumber(6, questionList);
+            int questionNumber = GenerateNonRepeatingRandomNumber(10, questionList);
             questionArea.Text = questions[questionNumber].Text;
             imageSpot.Source = questions[questionNumber].Image;
         }
